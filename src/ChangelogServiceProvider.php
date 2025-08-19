@@ -1,6 +1,6 @@
 <?php
 
-namespace Pro1GlobalHomeCenter\Changelog;
+namespace Pro1\Changelog;
 
 use Illuminate\Support\ServiceProvider;
 
