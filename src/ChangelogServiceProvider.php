@@ -17,6 +17,23 @@ class ChangelogServiceProvider extends ServiceProvider
         // Load views
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'changelogs');
 
+        Route::middleware('web')
+        ->prefix('changelog-assets')
+        ->group(function () {
+            Route::get('{path}', function ($path) {
+                $file = __DIR__ . '/../public/assets/' . $path;
+
+                if (!file_exists($file)) {
+                    abort(404);
+                }
+
+                $mime = mime_content_type($file);
+                return response()->file($file, [
+                    'Content-Type' => $mime
+                ]);
+            })->where('path', '.*');
+        });
+
         // $this->loadRoutesFrom(function () {
         //     Route::middleware(['web', 'auth']) //
         //         ->group(__DIR__.'/../routes/web.php');

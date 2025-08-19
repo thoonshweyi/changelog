@@ -66,7 +66,7 @@
 
 @section('scripts')
 {{-- sweetalert js1 --}}
-<script src="{{ asset('vendor/pro1/changelog/public/assets/libs/sweetalert2/sweetalert2@11.js') }}" type="text/javascript"></script>
+<script src="{{ url('changelog-assets/libs/sweetalert2/sweetalert2@11.js') }}" type="text/javascript"></script>
 
 <script type="text/javascript">
     $(document).ready(function(){

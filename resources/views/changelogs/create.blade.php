@@ -509,7 +509,7 @@
 @section('css')
 
 {{-- summernote css1 js1 --}}
-<link href="{{ asset('vendor/pro1/changelog/publicassets/libs/summernote-0.9.0-dist/summernote-lite.min.css') }}" rel="stylesheet" type="text/css"/>
+<link href="{{ url('changelog-assets/libs/summernote-0.9.0-dist/summernote-lite.min.css') }}" rel="stylesheet" type="text/css"/>
 <style>
 .note-editable h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
@@ -573,9 +573,9 @@
 
 @section("scripts")
 {{-- summernote css1 js1 --}}
-<script src="{{ asset('vendor/pro1/changelog/public/assets/libs/summernote-0.9.0-dist/summernote-lite.min.js') }}" type="text/javascript"></script>
+<script src="{{ url('changelog-assets/libs/summernote-0.9.0-dist/summernote-lite.min.js') }}" type="text/javascript"></script>
 {{-- sweetalert js1 --}}
-<script src="{{ asset('vendor/pro1/changelog/public/assets/libs/sweetalert2/sweetalert2@11.js') }}" type="text/javascript"></script>
+<script src="{{ url('changelog-assets/libs/sweetalert2/sweetalert2@11.js') }}" type="text/javascript"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){

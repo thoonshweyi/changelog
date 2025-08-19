@@ -12,11 +12,11 @@
 
 
         <!-- Lightbox2 css1 js1  -->
-        <link href="{{ asset('vendor/pro1/changelog/publicassets/libs/fancybox/fancybox.css') }}" type="text/css" rel="stylesheet"/>
+        <link href="{{ url('changelog-assets/libs/fancybox/fancybox.css') }}" type="text/css" rel="stylesheet"/>
         
 
         <!-- custom css css1 -->
-        <link href="{{ asset('vendor/pro1/changelog/publicassets/dist/css/style.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ url('changelog-assets/dist/css/style.css') }}" rel="stylesheet" type="text/css"/>
 
         @yield('css')
     </head>
