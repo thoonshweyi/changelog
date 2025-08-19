@@ -18,9 +18,9 @@ class ChangelogServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'changelog');
 
         // Publish config, views, assets
-        $this->publishes([
-            __DIR__.'/../config/changelog.php' => config_path('changelog.php'),
-        ], 'config');
+        // $this->publishes([
+        //     __DIR__.'/../config/changelog.php' => config_path('changelog.php'),
+        // ], 'config');
     }
 
     public function register()

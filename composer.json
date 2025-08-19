@@ -5,13 +5,15 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Pro1GlobalHomeCenter\\Changelog\\": "src/"
+        "Pro1\\Changelog\\": "src/",
+        "App\\Models\\": "src/Models/",
+        "App\\Http\\Controllers\\": "src/Http/Controllers/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Pro1GlobalHomeCenter\\Changelog\\ChangelogServiceProvider"
+        "Pro1\\Changelog\\ChangelogServiceProvider"
       ]
     }
   }

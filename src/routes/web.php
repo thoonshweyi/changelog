@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Company\Changelog\Controllers\ChangelogController;
+use App\Http\Controllers\ChangeLogsController;
 
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('changelogs', ChangeLogsController::class);
