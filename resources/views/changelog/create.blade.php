@@ -1,4 +1,4 @@
-@extends('layouts.tailwindcentral.index')
+@extends("changelogs::layouts.tailwindcentral.index")
 
 @section('content')
 <header class="mb-8">

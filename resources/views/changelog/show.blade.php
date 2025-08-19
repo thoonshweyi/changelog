@@ -1,4 +1,4 @@
-@extends("layouts.tailwindcentral.index")
+@extends("changelogs::layouts.tailwindcentral.index")
 
 <div class="notification-header">
     <div class="notification-container">

@@ -24,9 +24,9 @@ class ChangeLogsController extends Controller
     public function __construct()
     {
         // $this->middleware('permission:view-change-log', ['only' => ['index','show']]);
-        $this->middleware('permission:create-change-log', ['only' => ['create', 'store']]);
-        $this->middleware('permission:edit-change-log', ['only' => ['edit', 'update']]);
-        $this->middleware('permission:delete-change-log', ['only' => ['destroy']]);
+        // $this->middleware('permission:create-change-log', ['only' => ['create', 'store']]);
+        // $this->middleware('permission:edit-change-log', ['only' => ['edit', 'update']]);
+        // $this->middleware('permission:delete-change-log', ['only' => ['destroy']]);
     }
 
     public function index(Request $request){
@@ -62,20 +62,20 @@ class ChangeLogsController extends Controller
             }
         }
 
-        $isAdmin = Auth::user()->isAdmin();
-        if($isAdmin){
+        // $isAdmin = Auth::user()->isAdmin();
+        // if($isAdmin){
             $changelogs = $result->latest()->paginate(10);
-        }else{
-            $roles_ids = Auth::user()->roles()->pluck('id');
-            $changelogs = $result->whereHas('roles',function($query) use($roles_ids){
-                $query->whereIn('roles.id',$roles_ids);
-            })
-            ->latest()->paginate(10);
-        }
+        // }else{
+        //     $roles_ids = Auth::user()->roles()->pluck('id');
+        //     $changelogs = $result->whereHas('roles',function($query) use($roles_ids){
+        //         $query->whereIn('roles.id',$roles_ids);
+        //     })
+        //     ->latest()->paginate(10);
+        // }
 
 
 
-        return view('changelogs.index',compact('changelogs'));
+        return view('changelogs::changelogs.index',compact('changelogs'));
     }
 
     public function create(Request $request){
@@ -84,7 +84,7 @@ class ChangeLogsController extends Controller
         $releasetypes = ReleaseType::where('status_id',1)->get();
         $prioritylevels = PriorityLevel::where('status_id',1)->get();
 
-        return view('changelogs.create',compact('roles',"statuses","releasetypes","prioritylevels"));
+        return view('changelogs::changelogs.create',compact('roles',"statuses","releasetypes","prioritylevels"));
     }
 
 
@@ -93,7 +93,7 @@ class ChangeLogsController extends Controller
         $changelog = ChangeLog::find($id);
 
         $whatsnews = WhatsNew::getAuthUserWhatNews();
-        return view('changelogs.show',compact('changelog', "whatsnews"));
+        return view('changelogs::changelogs.show',compact('changelog', "whatsnews"));
     }
 
     public function edit(Request $request,$id){
@@ -106,7 +106,7 @@ class ChangeLogsController extends Controller
 
 
         $role_ids = $changelog->roles->pluck('id')->toArray();
-        return view('changelogs.edit',compact('changelog','roles',"statuses","releasetypes","prioritylevels"));
+        return view('changelogs::changelogs.edit',compact('changelog','roles',"statuses","releasetypes","prioritylevels"));
     }
 
 
@@ -114,7 +114,7 @@ class ChangeLogsController extends Controller
      public function agree(Request $request,$id){
         $changelog = ChangeLog::find($id);
 
-        return view('changelogs.agree',compact('changelog'));
+        return view('changelogs::changelogs.agree',compact('changelog'));
     }
 
     public function fetchalldatas()

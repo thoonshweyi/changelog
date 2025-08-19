@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends("changelogs::layouts.app")
 
 @section('content')
     <div class="content-page">

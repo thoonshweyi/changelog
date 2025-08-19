@@ -15,7 +15,12 @@ class ChangelogServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
         // Load views
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'changelog');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'changelogs');
+
+        // $this->loadRoutesFrom(function () {
+        //     Route::middleware(['web', 'auth']) //
+        //         ->group(__DIR__.'/../routes/web.php');
+        // });
 
         // Publish config, views, assets
         // $this->publishes([
