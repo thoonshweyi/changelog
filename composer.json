@@ -6,8 +6,9 @@
   "autoload": {
     "psr-4": {
         "Pro1\\Changelog\\": "src/",
-        "App\\Models\\": "src/Models/",
-        "App\\Http\\Controllers\\": "src/Http/Controllers/"
+        "Pro1\\Changelog\\Models\\": "src/Models/",
+        "Pro1\\Changelog\\Http\\Controllers\\": "src/Http/Controllers/",
+        "Pro1\\Changelog\\Http\\Controllers\\Api\\": "src/Http/Controllers/Api"
     }
   },
   "extra": {

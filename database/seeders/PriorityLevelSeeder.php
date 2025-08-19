@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+use Pro1\Changelog\Models\User;
 use Illuminate\Support\Str;
-use App\Models\PriorityLevel;
+use Pro1\Changelog\Models\PriorityLevel;
 use Illuminate\Database\Seeder;
 
 class PriorityLevelSeeder extends Seeder

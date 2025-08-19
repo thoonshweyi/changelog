@@ -5,11 +5,11 @@
         <div class="notification-content">
             <div class="notification-icon">
                 <i class="fas fa-bell"></i>
-                <span class="notification-badge" id="pendingCount">{{ App\Models\WhatsNew::getAuthUserWhatNews()->count() }}</span>
+                <span class="notification-badge" id="pendingCount">{{ Pro1\Changelog\Models\WhatsNew::getAuthUserWhatNews()->count() }}</span>
             </div>
             <div class="notification-text">
                 <h4>What is News?</h4>
-                <p>သင်မဖတ်ရှုရသေးသောစနစ်၏ထပ်တိုးပြင်ဆင်မှု ယခုစာစောင်အပါအဝင်<strong><span id="pendingText"><span id="whatsnewscount">{{ App\Models\WhatsNew::getAuthUserWhatNews()->count() }}</span> ခုရှိပါသည်</span></strong></p>
+                <p>သင်မဖတ်ရှုရသေးသောစနစ်၏ထပ်တိုးပြင်ဆင်မှု ယခုစာစောင်အပါအဝင်<strong><span id="pendingText"><span id="whatsnewscount">{{ Pro1\Changelog\Models\WhatsNew::getAuthUserWhatNews()->count() }}</span> ခုရှိပါသည်</span></strong></p>
             </div>
             <a href="{{ route("whatsnews.index") }}" class="view-all-btn" onclick="toggleUpdatesList()">
                 <i class="fas fa-list mr-2"></i>

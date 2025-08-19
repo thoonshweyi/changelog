@@ -4,29 +4,29 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FAQController;
-use App\Models\ReturnAndExchangeReject;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\RoleController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\BranchController;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\DocumentController;
-use App\Http\Controllers\SupplierController;
-use App\Http\Controllers\WhatsNewsController;
-use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\ChangeLogsController;
-use App\Http\Controllers\DepartmentController;
-use App\Http\Controllers\PercentageController;
-use App\Http\Controllers\LocalizationController;
-use App\Http\Controllers\ImportProductController;
-use App\Http\Controllers\ChangeLogFilesController;
-use App\Http\Controllers\SourcingProductController;
-use App\Http\Controllers\LogisticDocumentController;
-use App\Http\Controllers\SourcingDocumentController;
-use App\Http\Controllers\SupplierDocumentController;
-use App\Http\Controllers\UserChangeLogReadsController;
-use App\Http\Controllers\ReturnAndExchangeRejectController;
+use Pro1\Changelog\Http\Controllers\FAQController;
+use Pro1\Changelog\Models\ReturnAndExchangeReject;
+use Pro1\Changelog\Http\Controllers\HomeController;
+use Pro1\Changelog\Http\Controllers\RoleController;
+use Pro1\Changelog\Http\Controllers\UserController;
+use Pro1\Changelog\Http\Controllers\BranchController;
+use Pro1\Changelog\Http\Controllers\ProductController;
+use Pro1\Changelog\Http\Controllers\DocumentController;
+use Pro1\Changelog\Http\Controllers\SupplierController;
+use Pro1\Changelog\Http\Controllers\WhatsNewsController;
+use Pro1\Changelog\Http\Controllers\Auth\LoginController;
+use Pro1\Changelog\Http\Controllers\ChangeLogsController;
+use Pro1\Changelog\Http\Controllers\DepartmentController;
+use Pro1\Changelog\Http\Controllers\PercentageController;
+use Pro1\Changelog\Http\Controllers\LocalizationController;
+use Pro1\Changelog\Http\Controllers\ImportProductController;
+use Pro1\Changelog\Http\Controllers\ChangeLogFilesController;
+use Pro1\Changelog\Http\Controllers\SourcingProductController;
+use Pro1\Changelog\Http\Controllers\LogisticDocumentController;
+use Pro1\Changelog\Http\Controllers\SourcingDocumentController;
+use Pro1\Changelog\Http\Controllers\SupplierDocumentController;
+use Pro1\Changelog\Http\Controllers\UserChangeLogReadsController;
+use Pro1\Changelog\Http\Controllers\ReturnAndExchangeRejectController;
 
 /*
 |--------------------------------------------------------------------------

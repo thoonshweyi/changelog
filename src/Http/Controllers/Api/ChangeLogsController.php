@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace Pro1\Changelog\Http\Controllers\Api;
 
-use App\Models\User;
-use App\Models\WhatsNew;
-use App\Models\ChangeLog;
-use App\Models\SubChange;
+use Pro1\Changelog\Models\User;
+use Pro1\Changelog\Models\WhatsNew;
+use Pro1\Changelog\Models\ChangeLog;
+use Pro1\Changelog\Models\SubChange;
 use Illuminate\Http\Request;
-use App\Models\ChangeLogFile;
+use Pro1\Changelog\Models\ChangeLogFile;
 use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\Controller;
+use Pro1\Changelog\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
-use App\Http\Resources\ChangeLogsResource;
+use Pro1\Changelog\Http\Resources\ChangeLogsResource;
 
 class ChangeLogsController extends Controller
 {

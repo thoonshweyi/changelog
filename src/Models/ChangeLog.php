@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace Pro1\Changelog\Models;
 
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Auth;

@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-use App\Models\ChangeType;
+use Pro1\Changelog\Models\User;
+use Pro1\Changelog\Models\ChangeType;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 

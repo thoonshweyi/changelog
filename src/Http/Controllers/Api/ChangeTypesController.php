@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace Pro1\Changelog\Http\Controllers\Api;
 
-use App\Models\ChangeType;
+use Pro1\Changelog\Models\ChangeType;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use Pro1\Changelog\Http\Controllers\Controller;
 
 class ChangeTypesController extends Controller
 {

@@ -1,19 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Pro1\Changelog\Http\Controllers;
 
 use Exception;
 use Carbon\Carbon;
-use App\Models\Status;
-use App\Models\WhatsNew;
-use App\Models\ChangeLog;
-use App\Models\SubChange;
-use App\Models\ChangeType;
-use App\Models\ReleaseType;
-use App\Models\Authorizable;
+use Pro1\Changelog\Models\Status;
+use Pro1\Changelog\Models\WhatsNew;
+use Pro1\Changelog\Models\ChangeLog;
+use Pro1\Changelog\Models\SubChange;
+use Pro1\Changelog\Models\ChangeType;
+use Pro1\Changelog\Models\ReleaseType;
+use Pro1\Changelog\Models\Authorizable;
 use Illuminate\Http\Request;
-use App\Models\ChangeLogFile;
-use App\Models\PriorityLevel;
+use Pro1\Changelog\Models\ChangeLogFile;
+use Pro1\Changelog\Models\PriorityLevel;
 use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Log;

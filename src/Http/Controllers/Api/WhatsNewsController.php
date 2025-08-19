@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace Pro1\Changelog\Http\Controllers\Api;
 
-use App\Models\WhatsNew;
-use App\Models\ChangeLog;
+use Pro1\Changelog\Models\WhatsNew;
+use Pro1\Changelog\Models\ChangeLog;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\Http\Resources\ChangeLogsResource;
+use Pro1\Changelog\Http\Controllers\Controller;
+use Pro1\Changelog\Http\Resources\ChangeLogsResource;
 
 class WhatsNewsController extends Controller
 {

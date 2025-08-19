@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-use App\Models\ReleaseType;
+use Pro1\Changelog\Models\User;
+use Pro1\Changelog\Models\ReleaseType;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 

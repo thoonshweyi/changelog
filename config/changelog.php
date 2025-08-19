@@ -89,11 +89,11 @@ return [
     | User Model
     |--------------------------------------------------------------------------
     |
-    | The user model related to changelog records. Normally App\Models\User.
+    | The user model related to changelog records. Normally Pro1\Changelog\Models\User.
     | You can change this if your project uses a different model.
     |
     */
 
-    'user_model' => App\Models\User::class,
+    'user_model' => Pro1\Changelog\Models\User::class,
 
 ];
