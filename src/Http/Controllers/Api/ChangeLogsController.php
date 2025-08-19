@@ -1,6 +1,7 @@
 <?php
 
 namespace Pro1\Changelog\Http\Controllers\Api;
+use App\Http\Controllers\Controller;
 
 use Pro1\Changelog\Models\User;
 use Pro1\Changelog\Models\WhatsNew;
@@ -9,7 +10,6 @@ use Pro1\Changelog\Models\SubChange;
 use Illuminate\Http\Request;
 use Pro1\Changelog\Models\ChangeLogFile;
 use Illuminate\Support\Facades\DB;
-use Pro1\Changelog\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
 use Pro1\Changelog\Http\Resources\ChangeLogsResource;
