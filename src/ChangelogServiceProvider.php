@@ -4,6 +4,7 @@ namespace Pro1\Changelog;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Routing\Router;
 use Illuminate\Contracts\Http\Kernel;
 use Pro1\Changelog\Http\Middleware\WhatsNewMid;
 
