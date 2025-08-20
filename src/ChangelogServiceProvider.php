@@ -11,7 +11,6 @@ class ChangelogServiceProvider extends ServiceProvider
     {
         // Load package routes
         $this->loadRoutesFrom(__DIR__.'/routes/web.php');
-        $this->loadRoutesFrom(__DIR__.'/routes/api.php');
 
 
         // Load migrations
@@ -20,27 +19,20 @@ class ChangelogServiceProvider extends ServiceProvider
         // Load views
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'changelogs');
 
-        Route::middleware('web')
-        ->prefix('changelog-assets')
-        ->group(function () {
-            Route::get('{path}', function ($path) {
-                $file = __DIR__ . '/../public/assets/' . $path;
-
-                if (!file_exists($file)) {
-                    abort(404);
-                }
-
-                $mime = mime_content_type($file);
-                return response()->file($file, [
-                    'Content-Type' => $mime
-                ]);
-            })->where('path', '.*');
-        });
+        // Publish assets
+        $this->publishes([
+            __DIR__.'/../public/' => public_path('vendor/pro1/changelog'),
+        ], 'public');
 
         // $this->loadRoutesFrom(function () {
         //     Route::middleware(['web', 'auth']) //
         //         ->group(__DIR__.'/../routes/web.php');
         // });
+
+        Route::middleware('api')
+        ->prefix('api')
+        ->group(__DIR__.'/../src/routes/api.php');
+
 
         // Publish config, views, assets
         // $this->publishes([

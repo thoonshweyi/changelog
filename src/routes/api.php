@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Pro1\Changelog\Http\Controllers\Api\ChangeLogsController;
+use Pro1\Changelog\Http\Controllers\Api\ChangeTypesController;
 
 Route::apiResource("changelogs",ChangeLogsController::class,["as"=>"api"]);
 Route::get('changelogs/{id}/changes',[ChangeLogsController::class,"changes"]);
