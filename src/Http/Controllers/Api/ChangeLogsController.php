@@ -3,7 +3,7 @@
 namespace Pro1\Changelog\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 
-use Pro1\Changelog\Models\User;
+use App\Models\User;
 use Pro1\Changelog\Models\WhatsNew;
 use Pro1\Changelog\Models\ChangeLog;
 use Pro1\Changelog\Models\SubChange;

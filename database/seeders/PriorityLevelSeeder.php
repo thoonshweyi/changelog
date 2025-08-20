@@ -1,8 +1,8 @@
 <?php
 
-namespace Database\Seeders;
+namespace Pro1\Changelog\Database\Seeders;
 
-use Pro1\Changelog\Models\User;
+use App\Models\User;
 use Illuminate\Support\Str;
 use Pro1\Changelog\Models\PriorityLevel;
 use Illuminate\Database\Seeder;

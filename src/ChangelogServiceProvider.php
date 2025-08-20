@@ -33,6 +33,11 @@ class ChangelogServiceProvider extends ServiceProvider
         ->prefix('api')
         ->group(__DIR__.'/../src/routes/api.php');
 
+        $this->callAfterResolving(\Illuminate\Database\Seeder::class, function ($seeder) {
+            $seeder->call(\Pro1\Changelog\Database\Seeders\ChangeTypeSeeder::class);
+            $seeder->call(\Pro1\Changelog\Database\Seeders\PriorityLevelSeeder::class);
+            $seeder->call(\Pro1\Changelog\Database\Seeders\ReleaseTypeSeeder::class);
+        });
 
         // Publish config, views, assets
         // $this->publishes([
