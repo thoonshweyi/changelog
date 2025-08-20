@@ -18,6 +18,20 @@ class WhatsNewMid
      */
     public function handle(Request $request, Closure $next)
     {
+
+        
+        if (
+            $request->is('login') ||
+            $request->is('register') ||
+            $request->is('password/*') ||
+            $request->is('logout')
+        ) {
+            return $next($request);
+        }
+
+        if ($request->is('changelogs*')) {
+            return $next($request);
+        }
         if($whatsnew = $this->userwhatnew()){
             return redirect()->route('changelogs.show',$whatsnew->change_log_id);
         }

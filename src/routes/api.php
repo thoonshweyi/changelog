@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Pro1\Changelog\Http\Controllers\Api\WhatsNewsController;
 use Pro1\Changelog\Http\Controllers\Api\ChangeLogsController;
 use Pro1\Changelog\Http\Controllers\Api\ChangeTypesController;
 

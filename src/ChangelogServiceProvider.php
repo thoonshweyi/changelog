@@ -41,11 +41,8 @@ class ChangelogServiceProvider extends ServiceProvider
         ], 'changelog-seeders');
 
 
-         // Get the HTTP kernel
-        $kernel = $this->app->make(Kernel::class);
-
-        // Push your middleware to global stack (runs on all routes)
-        $kernel->pushMiddleware(WhatsNewMid::class);
+        $this->app->make(Router::class)
+        ->pushMiddlewareToGroup('web', WhatsNewMid::class);
 
         // Publish config, views, assets
         // $this->publishes([
