@@ -21,7 +21,7 @@ class WhatsNew extends Model
     public static function getAuthUserWhatNews($status=0)
     {
         $user = Auth::user();
-        $user_id = $user->id;
+        $user_id = $user->id ?? $user->uuid;
 
         $whatnews = WhatsNew::where("user_id", $user_id)
             ->when($status !== 'read', function ($query) {

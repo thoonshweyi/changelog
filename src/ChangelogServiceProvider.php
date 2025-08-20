@@ -4,13 +4,15 @@ namespace Pro1\Changelog;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Contracts\Http\Kernel;
+use Pro1\Changelog\Http\Middleware\WhatsNewMid;
 
 class ChangelogServiceProvider extends ServiceProvider
 {
     public function boot()
     {
         // Load package routes
-        $this->loadRoutesFrom(__DIR__.'/routes/web.php');
+        // $this->loadRoutesFrom(__DIR__.'/routes/web.php');
 
 
         // Load migrations
@@ -24,20 +26,26 @@ class ChangelogServiceProvider extends ServiceProvider
             __DIR__.'/../public/' => public_path('vendor/pro1/changelog'),
         ], 'public');
 
-        // $this->loadRoutesFrom(function () {
-        //     Route::middleware(['web', 'auth']) //
-        //         ->group(__DIR__.'/../routes/web.php');
-        // });
 
         Route::middleware('api')
         ->prefix('api')
         ->group(__DIR__.'/../src/routes/api.php');
+
+        Route::middleware(['web', 'auth'])
+        ->group(__DIR__.'/../src/routes/web.php');
 
         $this->publishes([
             __DIR__.'/../database/seeders/ChangeTypeSeeder.php' => database_path('seeders/ChangeTypeSeeder.php'),
             __DIR__.'/../database/seeders/PriorityLevelSeeder.php' => database_path('seeders/PriorityLevelSeeder.php'),
             __DIR__.'/../database/seeders/ReleaseTypeSeeder.php' => database_path('seeders/ReleaseTypeSeeder.php'),
         ], 'changelog-seeders');
+
+
+         // Get the HTTP kernel
+        $kernel = $this->app->make(Kernel::class);
+
+        // Push your middleware to global stack (runs on all routes)
+        $kernel->pushMiddleware(WhatsNewMid::class);
 
         // Publish config, views, assets
         // $this->publishes([

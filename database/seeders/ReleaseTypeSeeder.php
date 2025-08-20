@@ -1,6 +1,6 @@
 <?php
 
-namespace Pro1\Changelog\Database\Seeders;
+namespace Database\Seeders;
 
 use App\Models\User;
 use Pro1\Changelog\Models\ReleaseType;
