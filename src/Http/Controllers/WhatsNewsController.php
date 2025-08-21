@@ -2,6 +2,7 @@
 
 namespace Pro1\Changelog\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Pro1\Changelog\Models\WhatsNew;
 use Pro1\Changelog\Models\ChangeLog;
 use Illuminate\Http\Request;
