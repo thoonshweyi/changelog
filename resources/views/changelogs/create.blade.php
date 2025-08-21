@@ -303,7 +303,7 @@
 
                     <div class="space-y-4 h-[500px] overflow-y-auto">
                         <div class="flex items-center">
-                            <input type="checkbox" name="role_ids[]" id="role-all" class="role-checkbox rounded border-gray-300 text-indigo-600 focus:ring-indigo-500" value="all">
+                            <input type="checkbox" name="" id="role-all" class="role-checkbox rounded border-gray-300 text-indigo-600 focus:ring-indigo-500" value="all">
                             <label for="role-all" class="ml-3 flex items-center">
                                 <div class="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
                                     <i class="fas fa-users"></i>

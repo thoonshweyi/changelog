@@ -29,7 +29,7 @@ class WhatsNewMid
             return $next($request);
         }
 
-        if ($request->is('changelogs*')) {
+        if ($request->is('changelogs*') || $request->is('whatsnews*')) {
             return $next($request);
         }
 
