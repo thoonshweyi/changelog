@@ -24,7 +24,7 @@ class WhatsNewsController extends Controller
             return  ChangeLogsResource::collection($changelogs);
         }
 
-        return view('whatsnews.index',compact('whatsnews'));
+        return view('changelogs::whatsnews.index',compact('whatsnews'));
     }
 
 
