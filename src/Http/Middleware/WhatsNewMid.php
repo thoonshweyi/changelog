@@ -21,10 +21,10 @@ class WhatsNewMid
 
         
         if (
-            $request->is('login') ||
-            $request->is('register') ||
-            $request->is('password/*') ||
-            $request->is('logout')
+            $request->is('login') || $request->is('checkLogin')
+            || $request->is('register') 
+            || $request->is('password/*') 
+            || $request->is('logout')
         ) {
             return $next($request);
         }
