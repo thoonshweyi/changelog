@@ -24,11 +24,14 @@ class WhatsNew extends Model
         $user_id = $user->id ?? $user->uuid;
 
         $whatnews = WhatsNew::where("user_id", $user_id)
-            ->when($status !== 'read', function ($query) {
-                return $query->whereNull('read_at');
-            })
-            ->orderBy("id", 'desc')
-            ->get();
+        ->when($status == 'read', function ($query) {
+            return $query->whereNotNull('read_at');
+        }, function ($query) {
+            return $query->whereNull('read_at');
+        })
+        ->orderBy("id", 'desc')
+        ->get();
+
 
         return $whatnews;
     }

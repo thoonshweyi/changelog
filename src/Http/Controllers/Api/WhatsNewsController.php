@@ -18,7 +18,6 @@ class WhatsNewsController extends Controller
     public function index()
     {
         $whatsnews = WhatsNew::getAuthUserWhatNews();
-        dd($whatsnews);
         $changelog_ids = $whatnews->pluck("change_log_id");
         $changelogs = ChangeLog::whereIn("id",$changelog_ids)->get();
 

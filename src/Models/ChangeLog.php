@@ -78,7 +78,7 @@ class ChangeLog extends Model
             $whatsnew = WhatsNew::where("user_id",$user->id)
             ->where("change_log_id",$this->id)->first();
 
-            return $whatsnew ? $whatsnew->read_at : true;
+            return $whatsnew ? $whatsnew->read_at : false;
         }
         return false;
 

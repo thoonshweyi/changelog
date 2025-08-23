@@ -43,7 +43,7 @@ class ChangeLogsResource extends JsonResource
                     'changetype' => $subchange->changetype
                 ];
             })->toArray(),
-            "isAgreed" => \Carbon\Carbon::parse($this->isAgreed())->format("M d, Y"),
+            "isAgreed" => $this->isAgreed() ? \Carbon\Carbon::parse($this->isAgreed())->format("M d, Y h:i:s") : '',
         ];
     }
 }

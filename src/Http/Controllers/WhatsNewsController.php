@@ -11,7 +11,6 @@ use Pro1\Changelog\Http\Resources\ChangeLogsResource;
 class WhatsNewsController extends Controller
 {
     public function index(Request $request){
-        $whatsnews = WhatsNew::getAuthUserWhatNews($request->status);
         // $changelog_ids = $whatnews->pluck("change_log_id");
         // $changelogs = ChangeLog::whereIn("id",$changelog_ids)->get();
 
@@ -24,7 +23,7 @@ class WhatsNewsController extends Controller
             return  ChangeLogsResource::collection($changelogs);
         }
 
-        return view('changelogs::whatsnews.index',compact('whatsnews'));
+        return view('changelogs::whatsnews.index');
     }
 
 
