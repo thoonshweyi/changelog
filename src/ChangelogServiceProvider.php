@@ -39,6 +39,7 @@ class ChangelogServiceProvider extends ServiceProvider
             __DIR__.'/../database/seeders/ChangeTypeSeeder.php' => database_path('seeders/ChangeTypeSeeder.php'),
             __DIR__.'/../database/seeders/PriorityLevelSeeder.php' => database_path('seeders/PriorityLevelSeeder.php'),
             __DIR__.'/../database/seeders/ReleaseTypeSeeder.php' => database_path('seeders/ReleaseTypeSeeder.php'),
+            __DIR__.'/../database/seeders/StatusSeeder.php' => database_path('seeders/StatusSeeder.php'),
         ], 'changelog-seeders');
 
 
