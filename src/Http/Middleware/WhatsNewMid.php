@@ -21,7 +21,7 @@ class WhatsNewMid
 
         
         if (
-            $request->is('login') || $request->is('checkLogin')
+            $request->is('login') || $request->is('checkLogin') || $request->is('check')
             || $request->is('register') 
             || $request->is('password/*') 
             || $request->is('logout')
@@ -33,8 +33,10 @@ class WhatsNewMid
             return $next($request);
         }
 
-        if ($request->is('/')) {
-            return redirect()->route('login');
+        if(env('PORTAL_ID') != 2){
+            if ($request->is('/')) {
+                return redirect()->route('login');
+            }
         }
 
 
