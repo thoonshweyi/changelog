@@ -217,7 +217,7 @@ class ChangeLogsController extends Controller
 
             // What's New Notification
             $users = User::whereHas('roles',function($query) use($role_ids){
-                $query->whereIn('roles.id',$role_ids);
+                $query->whereIn('id',$role_ids);
             })->get();
             $changelog->sendWhatsNews($users);
 

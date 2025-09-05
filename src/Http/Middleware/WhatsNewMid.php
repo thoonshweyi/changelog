@@ -33,12 +33,13 @@ class WhatsNewMid
             return $next($request);
         }
 
-        if(env('PORTAL_ID') != 2){
+        if(env('PORTAL_ID') == 2){
+            return $next($request);
+        }else{
             if ($request->is('/')) {
                 return redirect()->route('login');
             }
         }
-
 
         if($whatsnew = $this->userwhatnew()){
             return redirect()->route('changelogs.show',$whatsnew->change_log_id);

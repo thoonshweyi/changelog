@@ -2,7 +2,7 @@
 
 namespace Pro1\Changelog\Models;
 
-use Spatie\Permission\Models\Role;
+use Pro1\Changelog\Models\BaseRole as Role;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

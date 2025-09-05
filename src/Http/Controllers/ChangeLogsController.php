@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 use Pro1\Changelog\Models\ChangeLogFile;
 use Pro1\Changelog\Models\PriorityLevel;
 use Illuminate\Support\Facades\DB;
-use Spatie\Permission\Models\Role;
+use Pro1\Changelog\Models\BaseRole as Role;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
