@@ -41,7 +41,7 @@ class ChangeLog extends Model
     }
 
     public function roles(){
-        return $this->belongsToMany(Role::class,"change_log_roles");
+        return $this->belongsToMany(Role::class,"change_log_roles","change_log_id","role_id");
     }
 
     public function isRead(){

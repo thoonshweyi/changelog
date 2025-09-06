@@ -19,11 +19,11 @@ class WhatsNewMid
     public function handle(Request $request, Closure $next)
     {
 
-        
+
         if (
             $request->is('login') || $request->is('checkLogin') || $request->is('check')
-            || $request->is('register') 
-            || $request->is('password/*') 
+            || $request->is('register')
+            || $request->is('password/*')
             || $request->is('logout')
         ) {
             return $next($request);
@@ -34,7 +34,13 @@ class WhatsNewMid
         }
 
         if(env('PORTAL_ID') == 2){
-            return $next($request);
+            if ($request->is('/')) {
+
+                if (!auth()->check()) {
+                    return $next($request); // not logged in, skip
+                }
+            }
+
         }else{
             if ($request->is('/')) {
                 return redirect()->route('login');
