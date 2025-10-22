@@ -6,6 +6,7 @@ use Closure;
 use Pro1\Changelog\Models\WhatsNew;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
 class WhatsNewMid
 {
@@ -24,7 +25,8 @@ class WhatsNewMid
             $request->is('login') || $request->is('checkLogin') || $request->is('check')
             || $request->is('register')
             || $request->is('password/*')
-            || $request->is('logout')
+            || $request->is('logout') || $request->is('admins/logout') 
+            || !auth()->check()
         ) {
             return $next($request);
         }
@@ -33,17 +35,16 @@ class WhatsNewMid
             return $next($request);
         }
 
-        if(env('PORTAL_ID') == 2){
+        // Sharepoint use root as dashboard so don't need to forward login
+        if(env('PORTAL_ID') != 2){
             if ($request->is('/')) {
-
-                if (!auth()->check()) {
-                    return $next($request); // not logged in, skip
+                 if (Route::has('admins.login')) {
+                return redirect()->route('admins.login');
+                } elseif (Route::has('login')) {
+                    return redirect()->route('login');
+                } else {
+                    return redirect('/login');
                 }
-            }
-
-        }else{
-            if ($request->is('/')) {
-                return redirect()->route('login');
             }
         }
 
